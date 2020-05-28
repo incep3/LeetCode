@@ -13,19 +13,17 @@
  * @return {Node}
  */
 var connect = function (root) {
-    if (!root)
-        return root;
+    if (!root) return root
 
-    deal(root.left, root.right);
-    return root;
-};
+    deal(root.left, root.right)
+    return root
+}
 
 function deal(left, right) {
-    if (!left)
-        return;
+    if (!left) return
 
-    left.next = right;
-    deal(left.left, left.right);
-    deal(left.right, right.left);
-    deal(right.left, right.right);
+    left.next = right
+    deal(left.left, left.right)
+    deal(left.right, right.left)
+    deal(right.left, right.right)
 }

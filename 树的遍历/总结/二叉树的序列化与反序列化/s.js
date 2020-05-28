@@ -36,7 +36,6 @@ var serialize = function (root) {
             break
         }
     }
-    console.log(JSON.stringify(output))
     return JSON.stringify(output)
 }
 
@@ -56,7 +55,7 @@ var deserialize = function (data) {
     } catch (e) {
         return null
     }
-    console.log(input)
+
     if (!Array.isArray(input) || input.length === 0) {
         return null
     }
